@@ -1,0 +1,26 @@
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".activity.DispositivosBT">
+
+    <TextView
+        android:id="@+id/idTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DISPOSITIVOS VINCULADOS"
+        android:textSize="18dp"
+        android:gravity="center" />
+
+    <ListView
+        android:id="@+id/idLista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+
+</android.support.v7.widget.LinearLayoutCompat>
