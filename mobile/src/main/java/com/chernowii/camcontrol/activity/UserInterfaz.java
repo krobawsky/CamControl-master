@@ -42,6 +42,8 @@ public class UserInterfaz extends AppCompatActivity {
     private SeekBar seekBar;
     private TextView textView;
 
+    int p=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,13 +84,13 @@ public class UserInterfaz extends AppCompatActivity {
         IdEncender.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
-                MyConexionBT.write("255");
+                MyConexionBT.write(p+",");
             }
         });
 
         IdApagar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                MyConexionBT.write("0");
+                MyConexionBT.write(255+",");
             }
         });
 
@@ -114,7 +116,7 @@ public class UserInterfaz extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
                 progress = progresValue;
                 textView.setText("Covered: " + progress + "/" + seekBar.getMax());
-
+                p=progress;
             }
 
             @Override
@@ -125,7 +127,6 @@ public class UserInterfaz extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 textView.setText("Covered: " + progress + "/" + seekBar.getMax());
-                MyConexionBT.write(""+seekBar.getMax());
                 Toast.makeText(getApplicationContext(), "Stopped tracking seekbar", Toast.LENGTH_SHORT).show();
             }
         });
