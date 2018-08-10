@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
 
-                Intent myIntent = new Intent(MainActivity.this, DispositivosBT.class);
+                Intent myIntent = new Intent(MainActivity.this, CameraActivity.class);
                 myIntent.putExtra("camera", position); //Optional parameters
                 MainActivity.this.startActivity(myIntent);
             }

@@ -135,6 +135,7 @@ public class CameraActivity extends Activity {
         //Consigue la direccion MAC desde DeviceListActivity via EXTRA
         address = intent.getStringExtra(DispositivosBT.EXTRA_DEVICE_ADDRESS);//<-<- PARTE A MODIFICAR >->->
         //Setea la direccion MAC
+        /*
         BluetoothDevice device = btAdapter.getRemoteDevice(address);
 
         try
@@ -154,6 +155,7 @@ public class CameraActivity extends Activity {
         }
         MyConexionBT = new CameraActivity.ConnectedThread(btSocket);
         MyConexionBT.start();
+        */
     }
 
     @Override
